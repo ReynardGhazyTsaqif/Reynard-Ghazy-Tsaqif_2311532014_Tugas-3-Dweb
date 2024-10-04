@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme_color" content="#ff6600">
+    <title>Rynnify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+
+    <style>
+      body{
+        font-family: 'Quicksand','inter';
+        padding: 0;
+        margin: 0;
+      }
+      * {
+          box-sizing: border-box;
+      }
+      .atas {
+          background-color: white; 
+          color: black;
+          padding: 15px; 
+          position: fixed; 
+          top: 0; 
+          left: 0;
+          width: 100%;
+          z-index: 1000;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .atas nav {
+          display: flex; 
+          justify-content: space-between; 
+          align-items: center; 
+          position: sticky;
+      }
+      
+      .atas nav span {
+          font-size: 24px;
+          font-weight: bold;
+          padding-left: 10px;
+      }
+      
+      .atas nav ul {
+          list-style-type: none; 
+          display: flex; 
+      }
+      
+      .atas nav ul li {
+          margin-right: 20px; 
+      }
+      
+      .atas nav ul li a {
+          color: black;
+          text-decoration: none; 
+          transition: color 0.5s; 
+      }
+      
+      .atas nav ul li a:hover {
+          color: #FFEB3B; 
+          font-weight: bold;
+      }
+      footer {
+          background-color: black; 
+          color: white; 
+          padding: 20px;
+          display: flex;
+          justify-content: space-between;
+          
+          flex-wrap: wrap; 
+      }
+      
+      footer .jelas {
+          width: 50%;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          padding-left: 20px;
+          
+      }
+      footer .jelas .judul {
+          font-size:  2.25rem;
+          font-weight: bold;
+          
+          padding-bottom: 10px;
+      }
+      footer .jelas .isi {  
+          font-size: large;
+          padding-bottom: 10px;
+      }
+      
+      footer .tengah {
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+      }
+      footer .tengah .website{
+          font-size: large;
+          font-weight: bold; 
+      }
+      
+      footer .tengah ul {
+          
+          list-style-type: none; 
+          padding: 0;
+      }
+      
+      footer .tengah ul li {
+          font-size: large;
+          margin-top: 4px; 
+      }
+      
+      footer .tengah ul li a {
+          
+          color: #FFFFFF; 
+          text-decoration: none; 
+          transition: color 0.3s ease; 
+      }
+      
+      footer .tengah ul li a:hover {
+          color: #FFEB3B; 
+      }
+      
+      footer .ujung {
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          
+      }
+      footer .ujung .sosial{
+          font-size: large;
+          font-weight: bold; 
+      }
+      
+      footer .ujung ul {
+          
+          list-style-type: none; 
+          padding: 0;
+      }
+      
+      footer .ujung ul li {
+          font-size: large;
+          margin-top: 4px; 
+      }
+      
+      footer .ujung ul li a {
+          color: #FFFFFF; 
+          text-decoration: none; 
+          transition: color 0.3s ease; 
+      }
+      
+      footer .ujung ul li a:hover {
+          color: #FFEB3B; 
+      }
+        
+      main {
+        padding: 20px; /* Jarak dari tepi */
+        padding-top: 120px;
+      }
+    
+      #badan {
+          display: flex;
+          gap: 20px;
+      }
+      
+      #google-map {
+          flex: 1; 
+          max-width: 100%; 
+          overflow: hidden; 
+      }
+      
+      #google-map iframe {
+          width: 100%; 
+          height: 500px; 
+      }
+      
+      .form {
+          flex: 1; 
+          max-width: 100%; 
+          
+      }
+      
+      .form-control {
+          width: 100%; 
+          padding: 0.5rem; 
+          margin: 0.5rem 0; 
+          border: 1px solid #ced4da; 
+          border-radius: 0.25rem; 
+          
+      }
+      ::placeholder{
+        font-family: 'Quicksand','inter';
+        font-size: large;
+      }
+      
+      textarea.form-control {
+          resize: vertical; 
+      }
+      
+      .btn {
+          background-color: black; 
+          color: #fff; 
+          border: none; 
+          padding-top: 8px; 
+          padding-bottom: 8px; 
+          padding-left: 16px; 
+          padding-right: 16px;
+          border-radius: 0.25rem; 
+          cursor: pointer; 
+          border: 3px solid transparent;
+          margin-block-start: 1rem;
+          font-family: 'Quicksand' sans-serif;
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: 700;
+          transition: all 0.15s ease-in; 
+          border-radius: 999px;         
+      }
+      
+      .btn:hover {
+          background-color: white; 
+          color: black; 
+          border: 3px solid black;
+      } 
+    </style>
+</head>
+<body>
+    <header class="atas">
+        <nav>
+            <span>
+                Rynnify
+            </span>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+      <div id="badan">
+          <div id="google-map">
+              <iframe
+                  frameborder="0"
+                  src="https://www.google.com/maps/embed/v1/place?q=padang,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"
+              ></iframe>
+          </div>    
+  
+            
+        <div class="form">
+            <form action="confirmation.html" >
+                <input type="text" class="form-control" name="name" placeholder="Name" required>
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
+                
+                <select class="form-control" name="category" required>
+                    <option value="" disabled selected>Category</option>
+                    <option value="Question">Pertanyaan</option>
+                    <option value="Suggestion">Saran</option>
+                </select>
+                
+                <textarea class="form-control" rows="8" name="message" placeholder="Your message" required></textarea>
+                
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="reply" value="yes" required> Ingin menerima balasan
+                    </label>
+                    <label>
+                        <input type="radio" name="reply" value="no"> Tidak ingin menerima balasan
+                    </label>
+                </div>
+            
+                <button type="submit" class="btn">Send</button>
+            </form>
+        </div>
+      </div>
+  </main>
+
+    <footer class="Contact">
+        <div class="jelas">
+            <span class="judul">Rynnify</span>
+            <span class="isi">Kami menghadirkan berbagai pilihan musik <br>menarik dari seluruh dunia melalui Rynnify</span>
+            <span>&copy; Rynnify</span>
+        </div>
+
+        <div class="tengah">
+            <span class="website">Website</span>
+            <ul class="tengah1">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="ujung">
+            <span class="sosial">Social Media Creator</span>
+            <ul>
+                <li><a href="https://www.instagram.com/reynard_ghazy?igsh=bmQybGxvZHRqYW44" target="_blank" >Instagram</a></li>
+                <li><a href="https://x.com/GhazyReynard?t=O-T19fjIQud5WhagUyX-gQ&s=09" target="_blank" >X</a></li>
+                <li><a href="https://www.linkedin.com/in/reynard-ghazy-tsaqif-8457a7287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedln</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
+
+    <script src="js.js"></script>
+      
+    
+</body>
+</html>

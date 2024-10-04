@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme_color" content="#ff6600">
+    <title>Rynnify</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="manifest" href="/manifest.json">
+
+
+    <style>
+        
+        body{
+            font-family: 'Quicksand','inter';
+            padding: 0;
+            margin: 0;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        .atas {
+            background-color: white; 
+            color: black;
+            padding: 15px; 
+            position: fixed; 
+            top: 0; 
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .atas nav {
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky;
+        }
+        
+        .atas nav span {
+            font-size: 24px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+        
+        .atas nav ul {
+            list-style-type: none; 
+            display: flex; 
+        }
+        
+        .atas nav ul li {
+            margin-right: 20px; 
+        }
+        
+        .atas nav ul li a {
+            color: black;
+            text-decoration: none; 
+            transition: color 0.5s; 
+        }
+        
+        .atas nav ul li a:hover {
+            color: #FFEB3B; 
+            font-weight: bold;
+        }
+        footer {
+            background-color: black; 
+            color: white; 
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            
+            flex-wrap: wrap; 
+        }
+        
+        footer .jelas {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            padding-left: 20px;
+            
+        }
+        footer .jelas .judul {
+            font-size:  2.25rem;
+            font-weight: bold;
+            
+            padding-bottom: 10px;
+        }
+        footer .jelas .isi {  
+            font-size: large;
+            padding-bottom: 10px;
+        }
+        
+        footer .tengah {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+        }
+        footer .tengah .website{
+            font-size: large;
+            font-weight: bold; 
+        }
+        
+        footer .tengah ul {
+            
+            list-style-type: none; 
+            padding: 0;
+        }
+        
+        footer .tengah ul li {
+            font-size: large;
+            margin-top: 4px; 
+        }
+        
+        footer .tengah ul li a {
+            
+            color: #FFFFFF; 
+            text-decoration: none; 
+            transition: color 0.3s ease; 
+        }
+        
+        footer .tengah ul li a:hover {
+            color: #FFEB3B; 
+        }
+        
+        footer .ujung {
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        footer .ujung .sosial{
+            font-size: large;
+            font-weight: bold; 
+        }
+        
+        footer .ujung ul {
+            
+            list-style-type: none; 
+            padding: 0;
+        }
+        
+        footer .ujung ul li {
+            font-size: large;
+            margin-top: 4px; 
+        }
+        
+        footer .ujung ul li a {
+            color: #FFFFFF; 
+            text-decoration: none; 
+            transition: color 0.3s ease; 
+        }
+        
+        footer .ujung ul li a:hover {
+            color: #FFEB3B; 
+        }
+
+        #about{
+            background-image: url("Pic/bg.avif");
+            height: 100vh;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            color: white;
+            padding-bottom: 50px;
+        }
+
+        #about svg {
+            width: 50px; 
+            height: 50px; 
+        }
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header class="atas">
+        <nav>
+            <span>
+                Rynnify
+            </span>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="about">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" >
+                <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
+                <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
+            </svg> 
+            <h1>Here</h1>
+            <span>Rynnify, the best place to discover and enjoy music according to your taste</span>
+        </div>    
+    </main>
+
+    <footer id="Contact">
+        <div class="jelas">
+            <span class="judul">Rynnify</span>
+            <span class="isi">Kami menghadirkan berbagai pilihan musik <br>menarik dari seluruh dunia melalui Rynnify</span>
+            <span>&copy; Rynnify</span>
+        </div>
+
+        <div class="tengah">
+            <span class="website">Website</span>
+            <ul class="tengah1">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="ujung">
+            <span class="sosial">Social Media Creator</span>
+            <ul>
+                <li><a href="https://www.instagram.com/reynard_ghazy?igsh=bmQybGxvZHRqYW44" target="_blank" >Instagram</a></li>
+                <li><a href="https://x.com/GhazyReynard?t=O-T19fjIQud5WhagUyX-gQ&s=09" target="_blank" >X</a></li>
+                <li><a href="https://www.linkedin.com/in/reynard-ghazy-tsaqif-8457a7287?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">Linkedln</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    
+
+    <script src="js.js"></script>
+      
+    
+</body>
+</html>
