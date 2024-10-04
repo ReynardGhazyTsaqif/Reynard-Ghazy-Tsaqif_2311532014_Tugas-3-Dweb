@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme_color" content="#ff6600">
     <title>Rynnify</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
@@ -13,7 +12,6 @@
 
 
     <style>
-        
         body{
             font-family: 'Quicksand','inter';
             padding: 0;
@@ -157,26 +155,58 @@
         footer .ujung ul li a:hover {
             color: #FFEB3B; 
         }
+        
 
-        #about{
-            background-image: url("Pic/bg.avif");
-            height: 100vh;
-            background-size: cover;
-            display: flex;
-            flex-direction: column;
+        main .index{
+            flex: 1;
             align-items: center;
-            justify-content: end;
+            display: flex;
+            
+            padding: 120px;
+        }
+        
+        main .index .description{
+            flex: 1 1;
+        }
+        
+        main .index .description p{
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+        }
+        
+        main .index .description button{
+            padding: 0.8rem 2.5rem;
+            border: 3px solid transparent;
+            border-radius: 999px;
+            margin-block-start: 1rem;
+            background-color: black;
+            font-family: 'Quicksand' sans-serif;
+            text-transform: uppercase;
+            font-size: 1rem;
+            font-weight: 700;
             color: white;
-            padding-bottom: 50px;
-        }
-
-        #about svg {
-            width: 50px; 
-            height: 50px; 
+            cursor: pointer;
+            transition: all 0.15s ease-in;
         }
         
+        main .index .description button:hover{
+            border: 3px solid black;
+            background-color: transparent;
+            color: black;
+        }
         
+        main .index .images{
+            flex: 1;
+            display: flexs;
+        }
         
+        main .index .images img{
+            width: 300px;
+            min-width: 250px;
+            margin: auto;
+            border-radius: 50%;
+            margin-left: 100px;
+        }
     </style>
 </head>
 <body>
@@ -194,14 +224,22 @@
     </header>
 
     <main>
-        <div id="about">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26 26" >
-                <polygon class="play-btn__svg" points="9.33 6.69 9.33 19.39 19.3 13.04 9.33 6.69"/>
-                <path class="play-btn__svg" d="M26,13A13,13,0,1,1,13,0,13,13,0,0,1,26,13ZM13,2.18A10.89,10.89,0,1,0,23.84,13.06,10.89,10.89,0,0,0,13,2.18Z"/>
-            </svg> 
-            <h1>Here</h1>
-            <span>Rynnify, the best place to discover and enjoy music according to your taste</span>
-        </div>    
+        <div class="index">
+            <div class="description">
+                <p>Kami yakin bahwa musik adalah jembatan yang menghubungkan emosi dan kreativitas di era digital. Rynnify hadir sebagai platform streaming musik yang membantu pengguna menemukan dan menikmati musik dari seluruh dunia. Dengan fitur-fitur inovatif dan antarmuka yang ramah pengguna, Rynnify bertujuan untuk membawa pengalaman mendengarkan musik ke tingkat berikutnya, sambil mendukung musisi independen dan mengakselerasi industri musik global.
+                </p>
+                
+
+                <button>Lebih Lanjut</button>
+                <button id="installButton" style="display: none;">Install App</button>
+
+            </div>
+
+            <div class="images">
+                <img src="Pic\logo.png" alt="Rynnify Logo">
+            </div>
+
+        </div>
     </main>
 
     <footer id="Contact">
@@ -233,6 +271,8 @@
     
 
     <script src="js.js"></script>
+
+    
       
     
 </body>

@@ -1,6 +1,7 @@
 const CACHE_NAME = 'rynnify-cache-v1';
 const ASSETS_TO_CACHE = [
   '/',
+  'index.html',
   '/about.html',
   '/contact.html',
   '/confirmation.html',
